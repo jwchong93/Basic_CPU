@@ -14,17 +14,29 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020-clg484'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020-clg484'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5396 
+INFO: Helper process launched with PID 1040 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 312.770 ; gain = 78.922
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 313.113 ; gain = 78.609
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Top' [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:23]
+INFO: [Synth 8-638] synthesizing module 'Top' [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:46]
 	Parameter BIT_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'IF_ID_REG' [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:21]
+	Parameter BIT_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'IF_ID_REG' (0#1) [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:21]
+INFO: [Synth 8-638] synthesizing module 'ID_EX_REG' [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:26]
+	Parameter BIT_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ID_EX_REG' (0#1) [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:26]
+INFO: [Synth 8-638] synthesizing module 'EX_MEM_REG' [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:33]
+	Parameter BIT_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'EX_MEM_REG' (0#1) [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:33]
+INFO: [Synth 8-638] synthesizing module 'MEM_WB_REG' [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:40]
+	Parameter BIT_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'MEM_WB_REG' (0#1) [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:40]
 INFO: [Synth 8-638] synthesizing module 'instruction_memory' [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/InstructionMemory.sv:1]
 	Parameter BIT_WIDTH bound to: 32 - type: integer 
 	Parameter REG_BIT_WIDTH bound to: 5 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'instruction_memory' (1#1) [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/InstructionMemory.sv:1]
-WARNING: [Synth 8-689] width (32) of port connection 'Read_address' does not match port width (5) of module 'instruction_memory' [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:42]
+WARNING: [Synth 8-689] width (32) of port connection 'Read_address' does not match port width (5) of module 'instruction_memory' [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:89]
 INFO: [Synth 8-638] synthesizing module 'registers' [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Registers.sv:1]
 	Parameter BIT_WIDTH bound to: 32 - type: integer 
 	Parameter REG_BIT_WIDTH bound to: 5 - type: integer 
@@ -37,7 +49,7 @@ INFO: [Synth 8-256] done synthesizing module 'registers' (2#1) [C:/Users/JW/Desk
 INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/ALU.sv:23]
 	Parameter BIT_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'ALU' (3#1) [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/ALU.sv:23]
-WARNING: [Synth 8-350] instance 'ALU' of module 'ALU' requires 5 connections, but only 3 given [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:49]
+WARNING: [Synth 8-350] instance 'ALU' of module 'ALU' requires 5 connections, but only 4 given [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:98]
 INFO: [Synth 8-638] synthesizing module 'data_memory' [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/DataMemory.sv:1]
 	Parameter BIT_WIDTH bound to: 32 - type: integer 
 	Parameter REG_BIT_WIDTH bound to: 5 - type: integer 
@@ -47,13 +59,18 @@ WARNING: [Synth 8-87] always_comb on 'MEM_reg[2]' did not result in combinationa
 WARNING: [Synth 8-87] always_comb on 'MEM_reg[1]' did not result in combinational logic [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/DataMemory.sv:11]
 WARNING: [Synth 8-87] always_comb on 'MEM_reg[0]' did not result in combinational logic [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/DataMemory.sv:11]
 INFO: [Synth 8-256] done synthesizing module 'data_memory' (4#1) [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/DataMemory.sv:1]
-WARNING: [Synth 8-689] width (32) of port connection 'Address' does not match port width (5) of module 'data_memory' [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:50]
-WARNING: [Synth 8-350] instance 'data_memory' of module 'data_memory' requires 5 connections, but only 3 given [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:50]
-INFO: [Synth 8-256] done synthesizing module 'Top' (5#1) [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:23]
+WARNING: [Synth 8-689] width (32) of port connection 'Address' does not match port width (5) of module 'data_memory' [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:101]
+WARNING: [Synth 8-350] instance 'data_memory' of module 'data_memory' requires 5 connections, but only 3 given [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:101]
+WARNING: [Synth 8-6014] Unused sequential element next_pc_reg was removed.  [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:69]
+WARNING: [Synth 8-6014] Unused sequential element next_pc_reg was removed.  [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:71]
+WARNING: [Synth 8-6014] Unused sequential element Next_PC_reg was removed.  [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:73]
+WARNING: [Synth 8-3936] Found unconnected internal register 'instruction_reg' and it is trimmed from '32' to '26' bits. [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:70]
+INFO: [Synth 8-256] done synthesizing module 'Top' (5#1) [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:46]
 WARNING: [Synth 8-3331] design registers has unconnected port Read_register_1[4]
 WARNING: [Synth 8-3331] design registers has unconnected port Read_register_1[3]
 WARNING: [Synth 8-3331] design registers has unconnected port Read_register_2[4]
 WARNING: [Synth 8-3331] design registers has unconnected port Read_register_2[3]
+WARNING: [Synth 8-3331] design Top has unconnected port reset
 WARNING: [Synth 8-3331] design Top has unconnected port MemRead
 WARNING: [Synth 8-3331] design Top has unconnected port MemWrite
 WARNING: [Synth 8-3331] design Top has unconnected port ALU_operation[3]
@@ -61,20 +78,20 @@ WARNING: [Synth 8-3331] design Top has unconnected port ALU_operation[2]
 WARNING: [Synth 8-3331] design Top has unconnected port ALU_operation[1]
 WARNING: [Synth 8-3331] design Top has unconnected port ALU_operation[0]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 352.098 ; gain = 118.250
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 352.441 ; gain = 117.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 352.098 ; gain = 118.250
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 352.441 ; gain = 117.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 352.098 ; gain = 118.250
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 352.441 ; gain = 117.938
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-5546] ROM "Instruction" won't be mapped to RAM because it is too sparse
+INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/ALU.sv:32]
 INFO: [Synth 8-5545] ROM "zero0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "MEM_reg[4]" won't be mapped to RAM because it is too sparse
@@ -82,7 +99,7 @@ INFO: [Synth 8-5546] ROM "MEM_reg[3]" won't be mapped to RAM because it is too s
 INFO: [Synth 8-5546] ROM "MEM_reg[2]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "MEM_reg[1]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "MEM_reg[0]" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element PC_reg was removed.  [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:35]
+WARNING: [Synth 8-6014] Unused sequential element PC_reg was removed.  [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:68]
 WARNING: [Synth 8-327] inferring latch for variable 'MEM_reg[4]' [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Registers.sv:14]
 WARNING: [Synth 8-327] inferring latch for variable 'MEM_reg[3]' [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Registers.sv:14]
 WARNING: [Synth 8-327] inferring latch for variable 'MEM_reg[2]' [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Registers.sv:14]
@@ -94,7 +111,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'MEM_reg[2]' [C:/Users/JW/De
 WARNING: [Synth 8-327] inferring latch for variable 'MEM_reg[1]' [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/DataMemory.sv:11]
 WARNING: [Synth 8-327] inferring latch for variable 'MEM_reg[0]' [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/DataMemory.sv:11]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 352.098 ; gain = 118.250
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 352.441 ; gain = 117.938
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -109,7 +126,10 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   3 Input     32 Bit       Adders := 1     
-	   2 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               26 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 10    
 	   6 Input     32 Bit        Muxes := 1     
@@ -127,7 +147,10 @@ Hierarchical RTL Component report
 Module Top 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               26 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 2     
 Module instruction_memory 
@@ -168,8 +191,10 @@ No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'instruction_reg' and it is trimmed from '26' to '24' bits. [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:70]
 INFO: [Synth 8-5546] ROM "instruction_memory/Instruction" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element PC_reg was removed.  [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:35]
+WARNING: [Synth 8-6014] Unused sequential element PC_reg was removed.  [C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.srcs/sources_1/new/Top.sv:68]
+WARNING: [Synth 8-3331] design Top has unconnected port reset
 WARNING: [Synth 8-3331] design Top has unconnected port MemRead
 WARNING: [Synth 8-3331] design Top has unconnected port MemWrite
 WARNING: [Synth 8-3331] design Top has unconnected port ALU_operation[3]
@@ -278,7 +303,7 @@ WARNING: [Synth 8-3332] Sequential element (registers/MEM_reg[1][29]) is unused 
 WARNING: [Synth 8-3332] Sequential element (registers/MEM_reg[1][28]) is unused and will be removed from module Top.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 479.535 ; gain = 245.688
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 492.281 ; gain = 257.777
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -291,7 +316,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 479.535 ; gain = 245.688
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 492.281 ; gain = 257.777
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -303,7 +328,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 479.535 ; gain = 245.688
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 492.281 ; gain = 257.777
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -327,7 +352,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 479.535 ; gain = 245.688
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 492.281 ; gain = 257.777
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -340,7 +365,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 479.535 ; gain = 245.688
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 492.281 ; gain = 257.777
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -352,25 +377,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 479.535 ; gain = 245.688
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 492.281 ; gain = 257.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 479.535 ; gain = 245.688
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 492.281 ; gain = 257.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 479.535 ; gain = 245.688
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 492.281 ; gain = 257.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 479.535 ; gain = 245.688
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 492.281 ; gain = 257.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -395,20 +420,20 @@ Report Instance Areas:
 |1     |top      |       |     0|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 479.535 ; gain = 245.688
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 492.281 ; gain = 257.777
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 394 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 479.535 ; gain = 245.688
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 479.535 ; gain = 245.688
+Synthesis finished with 0 errors, 0 critical warnings and 553 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 492.281 ; gain = 257.777
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 492.281 ; gain = 257.777
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-26 Infos, 142 Warnings, 0 Critical Warnings and 0 Errors encountered.
+34 Infos, 149 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 571.020 ; gain = 344.938
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 574.438 ; gain = 348.699
 INFO: [Common 17-1381] The checkpoint 'C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.runs/synth_1/Top.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 571.020 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Oct 22 14:08:17 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 574.438 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 18 23:59:35 2017...

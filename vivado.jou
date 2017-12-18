@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2017.2.1 (64-bit)
+# SW Build 1957588 on Wed Aug  9 16:32:24 MDT 2017
+# IP Build 1948039 on Wed Aug  9 18:19:28 MDT 2017
+# Start of session at: Mon Dec 18 23:00:00 2017
+# Process ID: 5504
+# Current directory: C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4080 C:\Users\JW\Desktop\MKEL1183 Advanced Computer Architecture\Assignment1\Basic_CPU\Basic_CPU.xpr
+# Log file: C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/vivado.log
+# Journal file: C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/JW/Desktop/MKEL1183 Advanced Computer Architecture/Assignment1/Basic_CPU/Basic_CPU.xpr}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1

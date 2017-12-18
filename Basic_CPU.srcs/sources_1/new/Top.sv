@@ -50,7 +50,7 @@ module Top # (parameter BIT_WIDTH=32) (
     input [3:0] ALU_operation
     );
     
-    logic [BIT_WIDTH-1:0] PC,Next_PC,Instruction,Memory_data,Reg_data_1,Reg_data_2,ALU_data_2,ALU_result, Mem_data;
+   logic [BIT_WIDTH-1:0] PC,Next_PC; 
 
     
     //First stage registers (IF)
@@ -78,8 +78,8 @@ module Top # (parameter BIT_WIDTH=32) (
         id_ex_reg.next_pc = if_id_reg.next_pc; 
         id_ex_reg.signed_extended = (32'(signed'(if_id_reg.instruction & 16'HFFFF)));
         
-        ex_mem_reg.pc = id_ex_reg.next_pc + id_ex_reg.signed_extended << 2;
-        ex_mem_reg.write_data = if_id_reg.reg_data_2;
+        ex_mem_reg.pc = id_ex_reg.next_pc + (id_ex_reg.signed_extended << 2);
+        ex_mem_reg.write_data = id_ex_reg.reg_data_2;
         
         mem_wb_reg.alu_result = ex_mem_reg.alu_result;
         
@@ -91,11 +91,11 @@ module Top # (parameter BIT_WIDTH=32) (
     //Second stage logics
     registers #(.BIT_WIDTH(BIT_WIDTH)) registers (.Read_register_1(if_id_reg.instruction[25:21]), 
      .Read_register_2(if_id_reg.instruction[20:16]), .Write_register(if_id_reg.instruction[15:11]), 
-     .Write_data (Memory_data), .Read_data_1 (if_id_reg.reg_data_1), .Read_data_2 (if_id_reg.reg_data_2), .RegWrite(RegWrite));
+     .Write_data (Memory_data), .Read_data_1 (id_ex_reg.reg_data_1), .Read_data_2 (id_ex_reg.reg_data_2), .RegWrite(RegWrite));
     
     //Third stage logics
-    assign ALU_data_2 = ALUSrc ? if_id_reg.reg_data_2:id_ex_reg.signed_extended;
-    ALU #(.BIT_WIDTH(BIT_WIDTH)) ALU (.Data1(if_id_reg.reg_data_1), .Data2(ALU_data_2), .Result(ex_mem_reg.alu_result), .zero(ex_mem_reg.zero));
+    assign ALU_data_2 = ALUSrc ? id_ex_reg.reg_data_2:id_ex_reg.signed_extended;
+    ALU #(.BIT_WIDTH(BIT_WIDTH)) ALU (.Data1(id_ex_reg.reg_data_1), .Data2(ALU_data_2), .Result(ex_mem_reg.alu_result), .zero(ex_mem_reg.zero));
     
     //Forth stage logics 
     data_memory #(.BIT_WIDTH(BIT_WIDTH)) data_memory (.Address(ex_mem_reg.alu_result), .Write_data(ex_mem_reg.write_data), .Read_data(mem_wb_reg.read_data));
